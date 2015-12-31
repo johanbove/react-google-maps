@@ -5,15 +5,15 @@
     "clean": "rimraf ../../public/index.html ../../public/assets",
     "prebuild": "npm run clean",
     "prebuild:windows": "npm run clean",
-    "build": "NODE_ENV=production reacthtmlpack buildToDir ../../public './views/**/*.html.js'",
-    "build:windows": "set NODE_ENV=production&& reacthtmlpack buildToDir ../../public './views/**/*.html.js'",
+    "build": "NODE_ENV=production reacthtmlpack buildToDir ../../public './src/views/**/*.html.js'",
+    "build:windows": "set NODE_ENV=production&& reacthtmlpack buildToDir ../../public './src/views/**/*.html.js'",
     "predev": "npm run clean",
-    "dev": "reacthtmlpack buildToDir ../../public './views/**/*.html.js'",
+    "dev": "reacthtmlpack buildToDir ../../public './src/views/**/*.html.js'",
     "prestart": "npm run clean",
     "prestart:windows": "npm run clean",
     "prestart:docker": "npm run clean",
-    "start": "reacthtmlpack devServer ./Client.webpackConfig.js ../../public './views/**/*.html.js'",
-    "start:windows": "reacthtmlpack devServer ./Client.webpackConfig.js ../../public './views/**/*.html.js'"
+    "start": "reacthtmlpack devServer ./Client.webpackConfig.js ../../public './src/views/**/*.html.js'",
+    "start:windows": "reacthtmlpack devServer ./Client.webpackConfig.js ../../public './src/views/**/*.html.js'"
   },
   "devDependencies": {
     "babel-core": "^5.8.25",
@@ -46,6 +46,7 @@
     "raf": "^3.1.0",
     "react": "^0.14.5",
     "react-addons-update": "^0.14.5",
+    "react-bootstrap": "^0.28.1",
     "react-dom": "^0.14.5",
     "react-github-fork-ribbon": "^0.4.2",
     "react-google-maps": "^4.7.1",
