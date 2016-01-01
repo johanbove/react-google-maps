@@ -5,6 +5,7 @@ import {
 import {
   WebpackScriptEntry,
   WebpackStyleEntry,
+  ReactDOMServerRenderToStringEntry,
 } from "reacthtmlpack/lib/entry";
 
 export default (
@@ -26,7 +27,13 @@ export default (
       />
     </head>
     <body>
-      <div id="react-container"/>
+      <ReactDOMServerRenderToStringEntry
+        id="react-container"
+        tagName="div"
+        chunkName="server"
+        chunkFilepath="./server.js"
+        configFilepath="../../Server.webpackConfig.js"
+      />
       <WebpackScriptEntry
         chunkName="client"
         chunkFilepath="./client.js"
